@@ -20,7 +20,8 @@ body {
   font-size: 1rem;
   min-height: 100vh;
   display: flex;
-  overflow: hidden;
+  overflow-y: auto;   /* Allow vertical scrolling */
+  overflow-x: hidden;
 }
 
 .container {
