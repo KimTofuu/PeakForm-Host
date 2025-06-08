@@ -152,7 +152,7 @@
                 </tbody>
               </table>
             </div>
-            <!-- Progress Bar Section: Always visible, not affected by table height -->
+            <!-- Progress Bar Section: Now below the table -->
             <div class="runner-track-container">
               <div class="progress-info" style="display: flex; justify-content: space-between;">
                 <div style="color:white; font-size: 1rem;">
