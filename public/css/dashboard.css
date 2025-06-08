@@ -1,0 +1,1742 @@
+
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-image: url('../images/background-18.jpg');
+  background-size: 100% 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #000;
+  font-size: 1rem;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  max-width: 100vw;
+  width: 100%;
+  margin: 0 auto; 
+}
+
+.sidebar {
+  width: 15rem;
+  background-color: rgba(60, 60, 60, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  box-shadow: 0 1.0625rem 1.1875rem rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+  text-align: center;
+  padding: 1rem;
+}
+
+.avatar {
+  width: 6rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.name {
+  font-size: 0.8rem;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.nav-menu a {
+  padding: 1rem;
+  text-align: center;
+  color: #fafafa;
+  text-decoration: none;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+
+.nav-menu a.active,
+.nav-menu a:hover {
+  background-color: black;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  width: 95%;
+  margin: auto;
+}
+
+.logout {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+.logout-btn {
+  width: 3.75rem;
+  height: 3.75rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  position: fixed;
+  bottom: 1rem; /* Adjust spacing from bottom */
+  left: 6rem;
+}
+
+.logout-btn:hover{
+  transform: scale(1.04);
+  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.4);
+
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto; 
+  overflow-x: hidden;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 1.5rem; 
+}
+
+.left_side,
+.middle,
+.right_side,
+.first-side,
+.second-side {
+  flex-basis: calc(50% - 0.75rem);
+  text-align: left;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.middle2{
+  flex-basis: calc(100% - 0.75rem);
+  text-align: left;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.first-side button {
+  justify-content: center; 
+}
+
+.right_side {
+  flex-basis: 20%; 
+}
+
+.right_side_2 {
+  flex-basis: 30%;
+}
+
+.daily_tab_2,
+.goals_plan,
+.progress_tab,
+.daily_tab,
+.reminders,
+.progress_tab2,
+.daily_tab2,
+.reminders2,
+.progress_tab3,
+.progress_tab5,
+.progress_tab6,
+.timer_tab,
+.daily_tab_prof {
+  padding: 2rem;
+  font-size: 1.5rem;
+  height: auto; 
+  background-color: rgba(60, 60, 60, 0.7);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.progress_tab4{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  height: 20rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.daily_tab_2 {
+  margin-bottom: 5rem;
+}
+
+.goals_plan {
+  height: 30rem; 
+}
+
+.progress_tab,
+.daily_tab,
+.reminders,
+.daily_tab_prof {
+  height: 35rem; 
+}
+
+.progress_tab2,
+.daily_tab2,
+.reminders2 {
+  height: 40rem; 
+  text-align: center;
+}
+
+.progress_tab3{
+  height: 20rem;
+  align-content: center;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+.progress_tab5{
+  height: 18rem;
+  text-align: center;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.progress_tab h2,
+.progress_tab6 h2,
+.intake-summary{
+  margin-left: 2rem;
+  color: #fafafa;
+}
+.progress_tab h3,
+.progress_tab2 h3  {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+.compare-btn{
+  margin: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 0.3125rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+.mealplan-label {
+  text-align: center;
+  justify-content: center;
+  padding: 2rem 5rem;
+  margin-top: -2rem;
+  align-content: center;
+}
+#actualProtein,
+#actualCarbs,
+#actualFat{
+  width: 100%;
+  padding: 0.75rem 0.9375rem;
+  border: 1px solid #ddd;
+  border-radius: 0.3125rem; 
+  font-size: 0.875rem; 
+  transition: border-color 0.3s;
+  margin: 0.5rem 0;
+}
+.header_content {
+  margin-bottom: 0.8rem;
+}
+
+.workout_content,
+.reminders_contents {
+  padding: 1.25rem;
+  margin: 0.625rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  font-size: 1.25rem;
+}
+
+.workout_content_2 {
+  padding: 1.25rem;
+  margin: 0.625rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  font-size: 2rem;
+  display: flex; 
+  align-items: center; 
+  border: solid 0.1rem gray;
+  border-radius: 0.5rem;
+}
+
+.video-link {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+.video-link button,
+.modal-btn {
+  background-color: #00bfff;
+  padding: 0.65rem 1.375rem;
+  border: none;
+  border-radius: 0.234375rem; 
+  font-size: 1rem; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+.goals_contents {
+  padding: 1.2rem;
+  margin: 0.625rem;
+  background-color: #bbb;
+  border-radius: 0.5rem;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.workout_content span,
+.workout_content_2 span {
+  font-size: 0.9rem;
+  color: #fafafa;
+}
+
+.daily_tab h3, 
+.daily_tab_prof h3 {
+  margin-top: 3.125rem;
+  text-align: left;
+  font-size: 2rem;
+}
+
+
+.progress_contents {
+  width: 100%;
+}
+
+.progress_contents h3{
+  font-weight: 100;
+}
+.actions {
+  padding: 0.625rem;
+  align-items: left;
+}
+
+.actions button {
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  background-color: #00bfff;
+  color: white;
+  padding: 0.75rem 1rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+  width: 15rem;
+  height: 3rem;
+}
+
+.actions button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.4);
+  background-color: #00A8E6;
+}
+
+.actions_3 {
+  border-radius: 0.5rem;
+  text-align: left;
+  font-size: 1.5rem;
+  margin: 1.25rem 0;
+}
+
+img {
+  width: 2rem;
+  margin-bottom: -0.25rem;
+}
+
+.timer_tab {
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin:auto;
+  height: 28rem;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-around; 
+  align-items: center; 
+}
+
+.timer_tab h2 {
+  font-size: 2rem;
+  margin-bottom: 0.3125rem;
+}
+
+.timer_tab button {
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  background-color: #00bfff;
+  color: white;
+  padding: 0.75rem 1rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.timer_tab button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.4);
+  background-color: #00A8E6;
+}
+
+.circle-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 15rem;
+  height: 12rem;
+  margin: 0 auto 3rem; /* Center horizontally + add spacing below */
+}
+
+.progress-ring__circle {
+  transition: stroke-dashoffset 1s linear;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 440; /* 2π * r where r = 70 */
+  stroke-dashoffset: 0;
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Michroma', sans-serif;
+  font-size: 2.2rem;
+  color: white;
+}
+
+.workout_content_2 img {
+  width: 8rem;
+
+}
+
+.workout_content_2 p {
+  margin-left: 1.25rem;
+  margin-top: 0.625rem;
+}
+
+.left_side_1 {
+  flex-basis: 65%;
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 45rem; 
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem;
+  margin-top: -1rem;
+}
+
+.left_side_2 {
+  flex-basis: 40%;
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 3.125rem;
+  margin-left: 1.25rem;
+}
+
+.generate-btn {
+  text-align: center;
+  padding: 0.625rem 1.25rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 0.3125rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.generate-btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.4);
+  background-color: #00A8E6;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center; 
+  align-items: center; 
+}
+
+.modal-content {
+  background: white;
+  padding: 1.25rem;
+  width: 64rem; 
+  max-width: 25rem;
+  border-radius: 0.625rem;
+  font-family: 'Michroma', sans-serif;
+    max-width: 25rem;
+    padding: 2rem; 
+    margin: auto;
+    margin-top: 5rem;
+  
+
+}
+
+.modal-content button{
+  padding: 0.625rem 1.25rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 0.3125rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.modal-content button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.4);
+}
+
+.modal-content h2 {
+  margin-bottom: 0.9375rem;
+}
+
+.modal-content label {
+  display: block;
+  margin: 0.625rem 0;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 0.3125rem;
+  margin-top: 0.3125rem;
+}
+
+.close {
+  float: right;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.chart-container {
+  width: 12.5rem;
+  height: 12.5rem;
+  text-align: center;
+}
+
+.chart-container canvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+
+.modal-box {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  position: relative;
+}
+
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #00A8E6;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color:  #00A8E6;
+}
+
+.btn-secondary {
+  background-color: #ccc;
+  color: #000;
+}
+
+.btn-secondary:hover {
+  background-color: #bbb;
+}
+
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#mealPlanSummary{
+  width: 70%;
+  font-size: 1rem;
+  margin: auto;
+}
+
+.progress-form input {
+  padding: 0.625rem 0.625rem; 
+  font-size: 1rem;
+  min-width: 15rem; 
+  border-radius: 0.6rem;
+  margin-right: 0rem; 
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-form button {
+  padding: 0.625rem 0.625rem; 
+  min-width: 6.25rem;       
+  white-space: nowrap;      
+  font-size: 1rem;         
+  border: none;            
+  border-radius: 0.375rem; 
+  background-color: #00bfff; 
+  color: white;             
+  cursor: pointer;          
+  margin-left: 1.6rem; 
+}
+
+.progress-form button:hover{
+  background-color: #00A8E6;
+}
+
+.progress-form {
+  margin-top:1rem;
+  margin-bottom:1rem;
+  display: flex;
+  flex-direction: row;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+thead {
+  background-color: #e9ecef;
+  color: #495057; 
+}
+
+
+.progress-table th, .progress-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.progress-table th {
+   padding: 0.75rem;
+  text-align: center;
+  font-weight: bold;
+}
+.progress-table td {
+  background-color: #fff;
+}
+
+.daily_tab h2,
+.daily_tab_prof h2{
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  color: #fafafa;
+}
+
+.workout-list{
+  padding: 1.25rem;
+  margin: 1rem;
+  border-radius: 0.7rem;
+  text-align: left;
+  font-size: 1rem;
+  padding: 1.25rem;
+  width: 100%;
+
+}
+
+#workout-container, #workout-container * {
+  font-size: 2rem;
+}
+
+.exercise-item input[type="checkbox"]:checked + label {
+  opacity:50%;
+}
+
+.exercise-item{
+background-color: #bbb;
+padding: 0.9rem 1.5rem;
+border-radius: 0.7rem;
+box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+}
+
+.intake-summary p {
+  font-size: 1rem;
+}
+
+.day-controls2{
+  text-align: center;
+}
+.day-controls {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center ;
+  justify-content: space-between;
+}
+
+.day-controls span{
+  opacity: 50%;
+  margin: 0rem 2rem;
+}
+
+.prev-btn {
+  padding: 0.540rem 1.25rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: #00bfff;
+  border-radius: 0.3125rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+  border: none;
+}
+
+.prev-btn:hover{
+  background-color: #00bfff; 
+  color: white;
+}
+
+.next-btn {
+  padding: 0.625rem 1.25rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 0.3125rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.next-btn:hover{
+  transform: scale(105%);
+}
+
+.exercise-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* Hide default checkbox */
+.exercise-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  margin-right: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Checkmark style */
+.exercise-item input[type="checkbox"]::before {
+  content: "✔";
+  position: absolute;
+  font-size: 14px;
+  color: black;
+  top: 0;
+  left: 3px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Show checkmark when checked */
+.exercise-item input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+
+.progress_table_section{
+  margin-left: 2rem;
+}
+
+.dailyintake {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.dailyintake-inside {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.dailyintake p{
+  font-size: 20px;
+}
+
+.watch-btn:hover{
+  transform: scale(105%);
+  background-color: #00bfff;
+}
+
+ #loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(34, 34, 34, 0.6);
+    backdrop-filter: blur(10px); /* apply the blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    transition: opacity 0.5s ease;
+}
+
+#loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #00bfff;
+    border-radius: 3rem;
+    animation: spin 1s linear infinite;
+}
+
+.dumbbell-loader {
+  width: 150px;
+  height: 150px;
+  animation: updown 1s ease-in-out infinite;
+  display: block;
+}
+
+@keyframes updown {
+  0%   { transform: translateY(0);}
+  50%  { transform: translateY(-40px);}
+  100% { transform: translateY(0);}
+}
+
+#loader-wrapper {
+    transition: opacity 0.5s ease;
+}
+
+
+.workout_content_2 .exercise-details  {
+    font-size: 1rem; 
+    color: #8de7ff;
+}
+
+#workout-container .exercise-details{
+  font-size: 2rem;
+    color: white;
+}
+#workout-container .muscle-group {
+    font-size: 2rem;
+    color: #fafafa;
+    font-style: italic;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0; top: 0; width: 100%; height: 100%;
+  overflow: auto; background: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background: #222; margin: 10% auto; padding: 2rem; border-radius: 8px;
+  width: 90%; max-width: 400px; color: #fff; position: relative;
+}
+.close {
+  color: #aaa; position: absolute; top: 10px; right: 20px; font-size: 2rem; cursor: pointer;
+}
+.close:hover { color: #fff; }
+
+.runner-track-container {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  background-color: rgba(60, 60, 60, 0.7);
+  overflow: hidden;
+  border-radius: 3rem;
+  padding: 2rem;
+}
+
+.runner {
+  position: absolute;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  transition: left 1s ease-out;
+}
+
+.finish-line {
+  position: absolute;
+  top: 30%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+  font-size: 2rem;
+}
+
+.milestone {
+  position: absolute;
+  top: 60%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.milestone-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-top: 0.1rem;
+}
+
+.tooltip-wrapper input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Tooltip styles */
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  max-width: 220px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 0.5rem;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 1;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Arrow below tooltip */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 10px;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.progress-bar-container {
+  position: relative;
+  top: 2rem;
+  width: 100%;
+  height: 5rem;
+  background-color: transparent; /* remove green from here */
+  border-radius: 3rem;
+  margin-top: 24px;
+  overflow: hidden;
+}
+
+.progress-track {
+  position: absolute;
+  top: 0; /* adjust this depending on your bar height */
+  left: 0;
+  width: 100%;
+  height: 5rem; /* <== this controls the height of the green bar */
+  background-color: #274e2f; /* moved from container */
+  border-radius: 2rem;
+  z-index: 0;
+}
+.progress-info{
+  margin-bottom: -2rem;
+}
+
+/* Progress fill bar */
+.progress-bar-fill {
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  height: 5rem;
+  background-color: #4df56f; /* Tailwind blue-500 */
+  border-radius: 3rem;
+  transition: width 0.5s ease-in-out;
+  z-index: 1;
+}
+
+/* Milestone markers */
+.milestone {
+  position: absolute;
+  top: 100%;
+  margin-top: 4px;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.milestone-line {
+  width: 2px;
+  height: 12px;
+  background-color: #6b7280; /* Tailwind gray-600 */
+  margin: 0 auto 4px;
+}
+
+.milestone-label {
+  font-size: 12px;
+  color: #374151; /* Tailwind gray-700 */
+}
+
+/* Runner emoji */
+.runner {
+  position: absolute;
+  top: -24px;
+  transform: translateX(-50%);
+  font-size: 24px;
+  transition: left 0.5s ease-in-out;
+  z-index: 3;
+}
+
+/* Finish line emoji */
+.finish-line {
+  position: absolute;
+  top: -24px;
+  right: 0;
+  transform: translateX(50%);
+  font-size: 24px;
+  z-index: 2;
+}
+
+.table-scroll-container {
+  max-height: 10rem;/* set your desired height */
+  margin: 1rem 0;
+  overflow-y: auto;
+   /* match your table radius */
+}
+
+.progress_lower{
+  display: flex;
+  flex-direction: column !important;
+  height: 30rem;
+}
+
+/* For screens up to 1040px */
+@media (max-width: 1024px) {
+  body{
+    background-size: auto;
+    overflow-y: auto !important;
+  }
+
+  .profile-section, .nav-menu,
+  .logout-btn{
+    position: fixed;
+  }
+  
+  .logout-btn{
+  margin-top: 50rem;
+}
+  .nav-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  width: 20%;
+}
+
+.nav-menu a {
+  padding: 1rem;
+  text-align: center;
+  color: #fafafa;
+  text-decoration: none;
+  transition: background 0.3s;
+  font-size: 0.8rem;
+}
+
+.nav-menu a.active,
+.nav-menu a:hover {
+  background-color: black;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: auto;
+}
+  .sidebar {
+    width: 12rem;
+  }
+
+  .logout-btn {
+    left: 4rem;
+  }
+
+  .main-content{
+    flex-direction: column;
+    gap: 1rem; 
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .left_side,
+  .middle,
+  .right_side {
+    flex-basis: 100%;
+  }
+
+  .modal-content {
+    width: 80%;
+    max-width: 22rem;
+    padding: 1.5rem;
+  }
+
+  .chart-container {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .progress-form input {
+    min-width: 12rem;
+  }
+
+  .tooltip-text {
+    font-size: 0.8rem;
+    max-width: 180px;
+    padding: 0.4rem;
+  }
+
+  .progress-bar-container {
+    height: 25rem;
+    border-radius: 2rem;
+  }
+
+  .progress-bar-fill {
+    border-radius: 2rem;
+  }
+
+  .table-scroll-container {
+    max-height: 20%;
+  }
+
+  .daily_tab h2,
+  .daily_tab_prof h2 {
+    font-size: 1.4rem;
+  }
+
+  .progress_tab4 {
+    height: 20rem;
+  }
+
+  .dailyintake-inside p {
+    font-size: 0.9rem;
+  }
+
+  #comparisonChart {
+    max-width: 90%;
+  }
+
+  .middle2{
+    display: flex;
+    flex-direction: column !important;
+    max-width: 90% !important;
+  }
+  
+  .progress_lower{
+    flex-direction: column !important;
+    max-width: 100% !important;
+  }
+
+  .progress-form{
+    flex-direction: column !important;
+    max-width: 40% !important;
+  }
+  .progress-form input{
+    width: 100% !important;
+  }
+  .table-scroll-container{
+    max-height: 30rem;
+  }
+  .middle{
+    height: 40rem !important;
+  }
+
+  .progress_tab2{
+    height: 60rem !important;
+  }
+}
+
+/* For screens up to 768px */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 10rem;
+    padding: 0.5rem;
+  }
+
+   .logout-btn{
+  margin-top: 50rem;
+}
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .left_side,
+  .middle,
+  .right_side {
+    flex-basis: 100%;
+    font-size: 1.2rem;
+  }
+
+  .daily_tab,
+  .progress_tab,
+  .goals_plan,
+  .daily_tab_prof {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .middle {
+    width: 100% !important;
+  }
+
+   .middle button, .left_side button{
+    width: 30% !important;
+   }
+  .modal-content {
+    width: 90%;
+    max-width: 18rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .chart-container {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .progress-form {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: left !important;
+    align-items: left!important;
+    text-align: left !important;
+  }
+
+  .progress-form input {
+    font-size: 0.9rem;
+    width: 100% !important;
+    margin: 0rem !important;
+  }
+
+  .progress-form button {
+    width: 100% !important;
+    margin: 0rem !important;
+  }
+
+  .tooltip-text {
+    font-size: 0.7rem;
+    max-width: 150px;
+    padding: 0.3rem;
+  }
+
+  .progress-bar-container {
+    height: 20rem;
+  }
+
+  .runner,
+  .finish-line {
+    font-size: 20px;
+  }
+
+  .table-scroll-container{
+    max-height: 30rem;
+  }
+
+  .daily_tab h2,
+  .daily_tab_prof h2 {
+    font-size: 1.2rem;
+  }
+
+  .progress_tab4 {
+    height: 18rem;
+  }
+
+  .dailyintake-inside p {
+    font-size: 0.8rem;
+  }
+
+  .actions button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  #comparisonChart {
+    max-width: 80%;
+  }
+  
+  .progress_tab2,
+  .first-side,
+  .second-side{
+    width: 36rem;
+  }
+
+  .progress_table_section{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: start !important;
+    align-items: left!important;
+    text-align: left !important;
+  }
+
+  #openBodyFatModal, #openMuscleModal{
+    right:0px !important;
+    left:7.5rem !important;
+    width: 0.5rem !important;
+  }
+
+  .timer_tab{
+      height: 40rem !important;
+    }
+
+    .progress_tab2{
+    height: 50rem !important;
+  }
+
+  #workout-container .exercise-details{
+  font-size: 1.5rem !important;
+}
+#workout-container .muscle-group {
+    font-size: 1.5rem !important;
+}
+#workout-container, #workout-container * {
+  font-size: 1.5rem !important;
+}
+}
+
+@media (max-width: 430px) {
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #222; /* Change background color */
+    transition: left 0.3s ease-in-out;
+    padding-top: 20px;
+    z-index: 1;
+  }
+
+  .burger-menu {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    background: url('../images/burger-icon.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  .close-btn {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: url('../images/close-icon.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  .logout-btn{
+    position: relative;
+    margin-top: 0rem;
+    top: 32rem;
+    left: 0rem;
+  }
+
+   .middle button, .left_side button{
+    width: 70% !important;
+   }
+
+   #comparisonChart{
+    height: 100% !important;
+   }
+ .middle, .left_side {
+    max-width: 100% !important;
+    width: 90% !important; /* Allow each to take nearly half of the 430px screen */
+    margin: 0 auto !important;
+}
+
+
+    .progress_table_section{
+      margin: 0rem !important;
+    }
+
+    .left_side_1{
+      width: 90% !important;
+      flex-basis: 100% !important;
+    }
+
+    .daily_tab_2, .workout_content_2{
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    .actions_3{
+      width: 70% !important;
+    }
+
+    #videoFrame{
+      width: 15rem !important;
+      height: 8rem !important;
+      padding: 0rem !important;
+    }
+
+    .main-content,.first-side, .second-side, .meal-summary hidden{
+      width: 100% !important;
+    }
+
+    #mealPlanChart{
+      width: 100% !important;
+    }
+    .meal-summary hidden h2, .meal-summary hidden p{
+      font-size: 1rem !important;
+      margin: 0rem !important;
+    }
+
+    #mealPlanSummary{
+      flex-direction: column !important;
+      display:flex !important;
+      text-align: left !important;
+      align-items: left !important;
+      justify-content: start !important;
+    }
+
+    .first-side{
+      flex-direction: column !important;
+      display:flex !important;
+      text-align: left !important;
+      align-items: left !important;
+      justify-content: start !important;
+      padding: 0rem !important;
+      width: 90% !important;
+    }
+
+    .progress_tab2{
+      flex-direction: column !important;
+      display:flex !important;
+      text-align: left !important;
+      align-items: left !important;
+      justify-content: start !important;
+      padding: 0rem !important;
+      width: 100% !important;
+    }
+
+    .generate-btn{
+      margin-top: 1rem !important;
+    }
+
+    .progress_tab3 input, .progress_tab3 button {
+      width: 100% !important;
+      margin: 0.4rem 0rem !important;
+      padding: 0.5 10rem !important;
+    }
+
+    .progress_tab3{
+      padding: 0rem !important;
+      height: 28rem !important;
+    }
+
+    .mealplan-label{
+      margin: 0rem !important;
+      padding: 0rem 1rem !important;
+      
+    }
+
+    .progress_tab5{
+      height: 28rem !important;
+    }
+
+    .timer_tab{
+      height: 38rem !important;
+    }
+
+    .nav-menu a.active,
+.nav-menu a:hover {
+  background-color: black;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  width: 9rem;
+  margin: 0rem;
+}
+
+.progress_tab2{
+    height: 40rem !important;
+  }
+
+  .modal-content{
+    width: 20rem !important;
+    justify-content: start !important;
+    align-items: left !important;
+    text-align: left !important;
+  }
+
+  .header_content h2{
+    margin: 0rem !important;
+  }
+
+#workout-container .exercise-details{
+  font-size: 1rem !important;
+}
+#workout-container .muscle-group {
+    font-size: 1rem !important;
+}
+#workout-container, #workout-container * {
+  font-size: 1rem !important;
+}
+
+.daily_tab, .daily_tab_prof{
+  width: 100% !important;
+}
+
+.intake-summary{
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+}
+
+.progress_contents{
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+}
+
+.second-side{
+  width: 90% !important;
+  height: 25rem !important;
+}
+
+.timer_tab{
+  width: 90%!important;
+
+}
+
+.circle-timer{
+  margin-bottom: 0.2rem !important;
+}
+#startBtn, #stopBtn, #resetBtn, #editBtn, #oneMinBtn, #twoMinBtn, #threeMinBtn{
+  margin: 0rem !important;
+}
+
+.daily_tab_prof{
+  height: 24rem !important;
+}
+}
+
+@media (max-width: 350px) {
+   .timer_tab{
+      height: 45rem !important;
+    }
+  }
+
+@media (max-width: 600px) {
+  .workout_content_2 {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.85rem;
+  }
+  .workout_content_2 label {
+    font-size: 0.95rem;
+  }
+  .exercise-details {
+    font-size: 0.85rem !important;
+  }
+  .muscle-group {
+    font-size: 0.8rem !important;
+  }
+  .workout_content_2 img {
+    width: 60px !important;
+    height: 40px !important;
+  }
+  .watch-btn {
+    padding: 0.3rem 0.7rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  .runner-track-container {
+  height: 45% !important;
+}
+
+.modal-btn{
+  font-size: 0.8rem !important;
+  padding: 0.2rem !important;
+}
+
+table{
+  font-size: 0.8rem !important;
+}
+}
