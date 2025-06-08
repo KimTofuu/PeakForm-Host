@@ -37,7 +37,7 @@ Route::get('/login', function () {
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/google-auth/redirect', [GoogleAuthController::class, 'redirect'])->name('google.redirect');
-Route::get('/google-auth/callback', [GoogleAuthController::class, 'callback'])->name('google.callback');
+Route::get('/auth/google/callback', [GoogleAuthController::class, 'callback'])->name('google.callback');
 
 Route::post('/chat', [ChatbotController::class, 'chat']);
 Route::post('/generate-meal-plan', [MealController::class, 'generateMealPlan'])->name('generate_meal_plan');
