@@ -127,7 +127,7 @@
               </div>
             </div>
           </div>
-              <div class = "progress_lower" style="display:flex;">
+              <div class = "progress_lower" style="display:flex; flex-direction: column; gap: 2rem;">
               <div class="table-scroll-container">
                 <table class="progress-table">
                   <thead>
