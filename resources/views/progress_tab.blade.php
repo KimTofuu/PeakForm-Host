@@ -155,7 +155,7 @@
               </div>
             </div>
             <!-- Table Section: Scrolls independently if long -->
-            <div class="table-scroll-container" style="max-height: 400px; overflow-y: auto;">
+            <div class="table-scroll-container" style="max-height: 350px; overflow-y: auto;">
               <table class="progress-table">
                 <thead>
                   <tr>
