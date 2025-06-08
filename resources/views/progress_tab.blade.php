@@ -123,6 +123,35 @@
             </div>
           </div>
           <div class="progress_lower" style="display:flex; flex-direction:column; gap:2rem;">
+            <!-- Table Section: Scrolls independently if long -->
+            <div class="table-scroll-container" style="max-height: 600px; overflow-y: auto;">
+              <table class="progress-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Weight (kg)</th>
+                    <th>Body Fat (%)</th>
+                    <th>Muscle Mass (kg)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @forelse($progressEntries as $entry)
+                    <tr>
+                      <td>{{ \Carbon\Carbon::parse($entry->date_recorded)->format('F j, Y') }}</td>   
+                      <td>{{ $entry->weight }}</td>
+                      <td>{{ $entry->body_fat_percentage }}</td>
+                      <td>{{ $entry->muscle_mass }}</td>
+                    </tr>
+                  @empty
+                    <tr>
+                      <td colspan="4" style="text-align:center; font-style: italic; color: #666;">
+                        No progress entries found yet.
+                      </td>
+                    </tr>
+                  @endforelse
+                </tbody>
+              </table>
+            </div>
             <!-- Progress Bar Section: Always visible, not affected by table height -->
             <div class="runner-track-container">
               <div class="progress-info" style="display: flex; justify-content: space-between;">
@@ -153,35 +182,6 @@
                 <!-- Finish Line -->
                 <div class="finish-line"></div>
               </div>
-            </div>
-            <!-- Table Section: Scrolls independently if long -->
-            <div class="table-scroll-container" style="max-height: 350px; overflow-y: auto;">
-              <table class="progress-table">
-                <thead>
-                  <tr>
-                    <th>Date</th>
-                    <th>Weight (kg)</th>
-                    <th>Body Fat (%)</th>
-                    <th>Muscle Mass (kg)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @forelse($progressEntries as $entry)
-                    <tr>
-                      <td>{{ \Carbon\Carbon::parse($entry->date_recorded)->format('F j, Y') }}</td>   
-                      <td>{{ $entry->weight }}</td>
-                      <td>{{ $entry->body_fat_percentage }}</td>
-                      <td>{{ $entry->muscle_mass }}</td>
-                    </tr>
-                  @empty
-                    <tr>
-                      <td colspan="4" style="text-align:center; font-style: italic; color: #666;">
-                        No progress entries found yet.
-                      </td>
-                    </tr>
-                  @endforelse
-                </tbody>
-              </table>
             </div>
           </div>
         </div>
